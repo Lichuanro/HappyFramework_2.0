@@ -1,4 +1,4 @@
-package entity;
+package allocator;
 
 public enum Strategy {
     PURCHASE, REPRODUCE

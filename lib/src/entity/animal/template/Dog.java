@@ -8,12 +8,12 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void call() {
+    public void speak() {
         print("Wang! Wang! Wang!");
     }
 
     @Override
-    public void run() {
+    public void move() {
         print("Very fast.");
     }
 }

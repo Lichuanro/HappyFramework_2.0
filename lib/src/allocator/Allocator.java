@@ -1,11 +1,14 @@
-package entity;
+package allocator;
 
 import application.Printable;
+import entity.Entity;
+
 
 
 interface Obtainable {
     Entity obtain();
 }
+
 
 public class Allocator<T extends Entity> implements Obtainable {
 

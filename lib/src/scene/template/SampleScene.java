@@ -1,7 +1,7 @@
 package scene.template;
 
-import entity.Allocator;
-import entity.Strategy;
+import allocator.Allocator;
+import allocator.Strategy;
 import entity.animal.template.Dog;
 import entity.plant.template.AppleTree;
 import scene.Scene;
@@ -20,8 +20,9 @@ public class SampleScene extends Scene {
     public void action() {
         // TODO: Create entity using factory method or abstract factory method
         Dog doggy = new Dog();
-        doggy.run();
-        doggy.call();
+        doggy.move();
+        doggy.speak();
+
 
 
         AppleTree appleTree = new AppleTree();
