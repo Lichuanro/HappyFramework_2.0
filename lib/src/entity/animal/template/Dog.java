@@ -1,6 +1,12 @@
 package entity.animal.template;
 
-public class Dog extends Animal{
+import entity.animal.Animal;
+
+public class Dog extends Animal {
+    public Dog() {
+        super();
+    }
+
     @Override
     public void call() {
         print("Wang! Wang! Wang!");

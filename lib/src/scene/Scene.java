@@ -1,8 +1,7 @@
-package scene.template;
+package scene;
 
 import application.Printable;
 import entity.Entity;
-import scene.Actionable;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -13,16 +12,20 @@ public abstract class Scene implements Printable, Actionable {
     private HashMap<String, Entity> children;
     private static long id = 0;
 
-    public Scene(){
+    protected Scene() {
 
         sceneName = "Default";
     }
 
-    public Scene(String name){
+    protected Scene(String name) {
         sceneName = name;
 
     }
 
+    @Override
+    public void action() {
+
+    }
 
     public String addChild(Entity entity) {
         String key = entity.getClass().toString() + " " +id++;

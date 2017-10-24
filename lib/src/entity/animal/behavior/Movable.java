@@ -1,5 +1,5 @@
 package entity.animal.behavior;
 
-public interface Runnalbe {
+public interface Movable {
     void run();
 }
