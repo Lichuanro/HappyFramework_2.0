@@ -10,11 +10,13 @@ class PlantGroup<T extends Plant> extends Group<T> implements PlantBehavior {
 
     @Override
     public void grow() {
+        print("" + super.count + " grow together: see next line");
         entity.grow();
     }
 
     @Override
     public void yield() {
+        print("" + super.count + " yield together: see next line");
         entity.yield();
     }
 }
