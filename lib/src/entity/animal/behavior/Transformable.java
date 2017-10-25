@@ -1,6 +1,6 @@
 package entity.animal.behavior;
 
-public interface Transformable {
+public interface Transformable<T> {
 
     /**
      * get current type of entity
@@ -10,10 +10,10 @@ public interface Transformable {
 
     /**
      * activate the transformation, change the type of current class
-     * @param entityName the destination class name, preferred to use class().toString()
+     * @param newEntity the destination class, use new Class()
      * @return the result of the transformation, usually true
      */
-    boolean transform(String entityName);
+    boolean transform(T newEntity);
 
     /**
      * get the previous type of the entity
@@ -21,9 +21,4 @@ public interface Transformable {
      */
     String getPreviousEntity();
 
-    /**
-     * return to the previous type
-     * @return the result of the return action
-     */
-    boolean returnToPrevious();
 }
