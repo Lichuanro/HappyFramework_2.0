@@ -1,7 +1,8 @@
 package entity.group;
 
+import behavior.plant.PlantBehavior;
 import entity.plant.Plant;
-import entity.plant.behavior.PlantBehavior;
+import entity.plant.PlantProduct;
 
 class PlantGroup<T extends Plant> extends Group<T> implements PlantBehavior {
     public PlantGroup(T t, int number) {
@@ -10,13 +11,13 @@ class PlantGroup<T extends Plant> extends Group<T> implements PlantBehavior {
 
     @Override
     public void grow() {
-        print("" + super.count + " grow together: see next line");
+        print("" + count + " bodies grew together: see next line");
         entity.grow();
     }
 
     @Override
-    public void yield() {
-        print("" + super.count + " yield together: see next line");
-        entity.yield();
+    public Group<PlantProduct> yield(int count) {
+        print("" + this.count + " products were produced: see next line");
+        return entity.yield(count * this.count);
     }
 }

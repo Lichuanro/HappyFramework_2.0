@@ -1,4 +1,4 @@
-package entity.animal.behavior;
+package behavior.animal;
 
 public interface AnimalBehavior extends Movable, Speakable {
 

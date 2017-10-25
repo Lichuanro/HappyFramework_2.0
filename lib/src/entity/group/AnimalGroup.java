@@ -1,7 +1,7 @@
 package entity.group;
 
+import behavior.animal.AnimalBehavior;
 import entity.animal.Animal;
-import entity.animal.behavior.AnimalBehavior;
 
 class AnimalGroup<T extends Animal> extends Group<T> implements AnimalBehavior {
     public AnimalGroup(T t, int number) {
@@ -11,13 +11,13 @@ class AnimalGroup<T extends Animal> extends Group<T> implements AnimalBehavior {
 
     @Override
     public void speak() {
-        print("" + super.count + " times echoed the voice: see next line");
+        print("" + count + " times echoed the voice: see next line");
         entity.speak();
     }
 
     @Override
     public void move() {
-        print("" + super.count + " bodies are moving together: see next line");
+        print("" + count + " bodies are moving together: see next line");
         entity.move();
     }
 }

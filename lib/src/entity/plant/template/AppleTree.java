@@ -1,5 +1,6 @@
 package entity.plant.template;
 
+import entity.group.Group;
 import entity.plant.Plant;
 import entity.plant.PlantProduct;
 
@@ -16,13 +17,14 @@ public class AppleTree extends Plant {
 
 
     @Override
-    public void yield() {
+    public Group<PlantProduct> yield(int count) {
         print("I have many apples now!");
+        return new Group<>(new Apple(), count);
 
     }
 
-    public class Apple extends PlantProduct {
-
+    @Override
+    public Plant purchaseAgain() {
+        return new AppleTree();
     }
-
 }
