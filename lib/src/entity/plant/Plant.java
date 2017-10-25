@@ -1,8 +1,8 @@
 package entity.plant;
 
 
+import behavior.plant.PlantBehavior;
 import entity.Entity;
-import entity.plant.behavior.PlantBehavior;
 
 
 public abstract class Plant extends Entity implements PlantBehavior {

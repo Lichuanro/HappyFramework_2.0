@@ -1,7 +1,7 @@
 package entity.animal;
 
+import behavior.animal.AnimalBehavior;
 import entity.Entity;
-import entity.animal.behavior.AnimalBehavior;
 
 public abstract class Animal extends Entity implements AnimalBehavior {
 
